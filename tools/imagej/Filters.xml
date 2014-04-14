@@ -1,0 +1,23 @@
+<tool id="ijFilters" name="Filters">
+  <description>Some filter operation</description>
+  <command interpreter="python">ijFilters.py $input "${filters}" $radius $outfile</command>
+  <inputs>
+    <param format="tiff" name="input" type="data" label="to Dataset" help="select image from list above" />
+    <param name="filters" type="select" label="filters">
+    <option value="Gaussian Blur...">Gaussian Blur</option>
+    <option value="Median...">Median</option>
+    <option value="Mean...">Mean</option>
+    <option value="Minimum...">Minimum</option>
+    <option value="Maximum...">Maximum</option>
+  </param>
+	<param name="radius" size="4" type="float" value="2" label="radius" />
+  </inputs>
+  <outputs>
+    <data format="input" name="outfile" metadata_source="input"/>
+  </outputs>
+  <help>
+ 
+help goes here
+ 
+  </help>
+</tool>

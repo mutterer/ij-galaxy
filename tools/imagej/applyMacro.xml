@@ -1,0 +1,18 @@
+<tool id="ijmacro" name="Apply macro">
+  <description>to an image</description>
+  <command interpreter="python">applyMacro.py $input "${code}" $outfile</command>
+  <inputs>
+    <param format="tiff" name="input" type="data" label="to Dataset" help="select image from list above" />
+	<param name="code" type="text" area="true" size="10x40" label="ImageJ macro" help="Paste your ij-macro code here.">
+	  <sanitizer sanitize="False"/>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="input" name="outfile" metadata_source="input"/>
+  </outputs>
+  <help>
+
+help goes here
+
+  </help>
+</tool>

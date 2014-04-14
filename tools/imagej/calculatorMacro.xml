@@ -1,0 +1,31 @@
+<tool id="ijCalculator" name="Image Calculator">
+<description>Performs arithmetic and logical operations between two images</description>
+<command interpreter="python">calculatorMacro.py $input1 $input2 $opera $outfile</command>
+<inputs>
+<param format="tiff" name="input1" type="data" label="Image A" help="select image from list above" />
+<param name="opera" type="select" label="Operation">
+	<option value="add">Add</option>
+	<option value="subtract">Subtract</option>
+	<option value="multiply">Multiply</option>
+	<option value="divide">Divide</option>
+	<option value="and">AND</option>
+	<option value="or">OR</option>
+	<option value="xor">XOR</option>
+	<option value="min">Minimum</option>
+	<option value="max">Maximun</option>
+	<option value="average">Average</option>
+	<option value="difference">Difference</option>
+	<option value="copy">Copy</option>
+</param>
+<param format="tiff" name="input2" type="data" label="Image B" help="select image from list above" />
+<sanitizer sanitize="False"/>
+</inputs>
+<outputs>
+<data format="input" name="outfile" metadata_source="input1"/>
+</outputs>
+<help>
+
+help goes here
+
+</help>
+</tool>

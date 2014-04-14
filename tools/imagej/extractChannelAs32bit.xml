@@ -1,0 +1,16 @@
+<tool id="ijextractchannel32" name="Extract Channel">
+  <description>extract a given channel as 32-bit</description>
+  <command interpreter="python">extractChannelAs32bit.py $input $channel $outfile</command>
+  <inputs>
+    <param format="tiff" name="input" type="data" label="to Dataset" help="select image from list above" />
+    <param name="channel" type="integer" value="1" label="Channel" help="select which channel to extract" />
+  </inputs>
+  <outputs>
+    <data format="input" name="outfile" metadata_source="input"/>
+  </outputs>
+  <help>
+
+Extracts a channel from a multi-channel image and returns as 32-bit grayscale.
+
+  </help>
+</tool>

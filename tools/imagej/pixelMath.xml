@@ -1,0 +1,28 @@
+<tool id="ijPixelMath" name="Pixel Maths">
+  <description>Some point operations</description>
+  <command interpreter="python">pixelMath.py $input "${expression}" $value $outfile</command>
+  <inputs>
+    <param format="tiff" name="input" type="data" label="to Dataset" help="select image from list above" />
+    <param name="expression" type="select" label="expression">
+      <option value="Add...">Add</option>
+      <option value="Subtract...">Subtract</option>
+      <option value="Multiply...">Multiply</option>
+      <option value="Divide...">Divide</option>
+      <option value="Min...">Minimum</option>
+      <option value="Max...">Maximum</option>
+      <option value="AND...">AND</option>
+      <option value="OR...">OR</option>
+      <option value="XOR...">XOR</option>
+    </param>
+    <param name="value" size="6" type="text" value="1" label="value" />                
+  </inputs>
+  <outputs>
+    <data format="input" name="outfile" metadata_source="input"/>
+  </outputs>
+  <help>
+ 
+help goes here
+ 
+  </help>
+</tool>
+

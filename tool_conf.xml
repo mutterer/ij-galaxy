@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<toolbox>
+  <section id="imagej" name="Image Processing">
+    <tool file="data_source/upload.xml" />
+    <tool file="imagej/extractChannelAs32bit.xml" />
+    <tool file="imagej/ijFilters.xml" />   
+    <tool file="imagej/pixelMath.xml" />   
+    <tool file="imagej/calculatorMacro.xml" />   
+    <tool file="imagej/applyMacro.xml" />
+  </section>
+</toolbox>
